@@ -30,6 +30,14 @@ const sample = (props: Props) => {
     },
   ];
 
+  //array of selected list
+  const Selected_on_list = list.filter(list => list.person === true);
+
+  //haha
+  const handleCat = e => {
+    console.log('hey:', e.target.checked);
+  };
+
   return (
     <Main>
       <br />
@@ -39,6 +47,11 @@ const sample = (props: Props) => {
             <input type="radio" checked={x.person} onClick={x.handleClick} />
             {x.text}
           </label>
+        ))}
+      </div>
+      <div>
+        {Selected_on_list.map(l => (
+          <h1 style={{ display: 'inline' }}>{l.text}, </h1>
         ))}
       </div>
     </Main>
