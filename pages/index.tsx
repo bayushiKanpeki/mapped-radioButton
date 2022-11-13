@@ -5,29 +5,14 @@ import React, { useState } from 'react';
 import AreaOfFocusController from '../components/AreaOfFocusController';
 
 const Home: NextPage = () => {
-  const [catPerson, setCatPerson] = React.useState(false);
-  const [dogPerson, setDogPerson] = React.useState(false);
-
-  const handleCatChange = () => {
-    setCatPerson(!catPerson);
-  };
-
-  const handleDogChange = () => {
-    setDogPerson(!dogPerson);
-  };
-
   const list = [
     {
       id: 'cat',
       text: 'Cat',
-      handleClick: handleCatChange,
-      person: catPerson,
     },
     {
       id: 'dog',
       text: 'Dog',
-      handleClick: handleDogChange,
-      person: dogPerson,
     },
   ];
 
